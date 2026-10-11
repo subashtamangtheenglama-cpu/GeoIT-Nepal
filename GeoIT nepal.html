@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#061522">
+<meta name="description" content="GeoIT Nepal — Mapping the Earth, Building the Future. Geomatics engineering, surveying, GIS, remote sensing, CAD, web, mobile apps and IT services in Sankhu, Kathmandu, Nepal.">
+<title>GeoIT Nepal | Mapping the Earth, Building the Future</title>
+<style>
+:root{--bg:#061522;--panel:#0b2233;--panel2:#102d41;--teal:#37e0bf;--blue:#68b6ff;--white:#f4f8fc;--muted:#afc2d0;--line:rgba(190,222,238,.17);--radius:20px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65}a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}.wrap{width:min(1160px,calc(100% - 38px));margin:auto}
+.top{background:#030c14;border-bottom:1px solid var(--line);color:#c0d2df;font-size:11px}.top .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:8px 0}
+header{position:sticky;top:0;z-index:30;background:rgba(6,21,34,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:11px;font-weight:900;font-size:22px;letter-spacing:-.8px}.logo{width:43px;height:43px;display:grid;place-items:center;border-radius:13px;background:linear-gradient(135deg,var(--teal),var(--blue));color:#041a28;font-size:22px}.brand small{display:block;font-size:9px;letter-spacing:2px;color:#a8c0d0;line-height:1.2}.navlinks{display:flex;align-items:center;gap:23px;font-size:12px;font-weight:750;color:#d5e3eb}.navlinks a:hover{color:var(--teal)}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:var(--teal);color:#041b28;border:0;border-radius:11px;padding:12px 17px;font-weight:850;font-size:12px;cursor:pointer;transition:.2s}.btn:hover{transform:translateY(-2px);box-shadow:0 10px 28px #37e0bf25}.btn.outline{background:transparent;color:white;border:1px solid #5a7689}.menu{display:none;background:transparent;color:white;border:1px solid #496779;border-radius:9px;padding:8px 11px;font-size:20px}
+.hero{position:relative;isolation:isolate;overflow:hidden;min-height:620px;display:flex;align-items:center;background:linear-gradient(90deg,rgba(3,15,26,.98) 0%,rgba(4,21,34,.9) 47%,rgba(4,20,31,.52) 100%),url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2000&q=85') center 48%/cover no-repeat}.hero:after{content:"";position:absolute;inset:0;z-index:-1;opacity:.25;background-image:linear-gradient(rgba(119,194,219,.25) 1px,transparent 1px),linear-gradient(90deg,rgba(119,194,219,.25) 1px,transparent 1px);background-size:46px 46px;mask-image:linear-gradient(90deg,black,transparent 95%)}.heroGrid{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:35px;padding:75px 0}.eyebrow{display:flex;align-items:center;gap:9px;color:var(--teal);font-size:10px;letter-spacing:2.2px;font-weight:900;text-transform:uppercase}.eyebrow:before{content:"";width:24px;height:2px;background:var(--teal)}h1{font-size:clamp(43px,5.5vw,70px);line-height:1.04;letter-spacing:-3px;margin:20px 0}.accent{color:var(--teal)}.hero p{color:#c3d2dc;max-width:600px;font-size:15px;line-height:1.9}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:27px}.heroFacts{display:flex;gap:18px;flex-wrap:wrap;margin-top:30px;color:#d0dfe8;font-size:11px}.heroFacts span:before{content:"✓";color:var(--teal);font-weight:900;margin-right:7px}.heroArt{min-height:370px;position:relative;display:grid;place-items:center}.earth{width:min(340px,90%);aspect-ratio:1;border-radius:50%;border:1px solid #8de5e544;background:radial-gradient(circle at 38% 32%,#2b9b9a 0,#15516b 22%,#0b2d49 51%,#061522 72%);box-shadow:inset -30px -22px 70px #020a14,0 0 80px #31d8ba16;position:relative;overflow:hidden}.earth:before{content:"";position:absolute;inset:-10%;border-radius:50%;background:repeating-radial-gradient(ellipse at 40% 45%,transparent 0 17px,#b1f8eb35 18px 19px),repeating-linear-gradient(26deg,transparent 0 28px,#b1f8eb21 29px 30px);transform:rotate(-18deg)}.earth:after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 45%,#020d1d9c 88%)}.orbit{position:absolute;width:115%;height:48%;border:1px solid #58d9c978;border-radius:50%;transform:rotate(-27deg)}.orbit.two{transform:rotate(54deg);width:112%;height:60%;border-color:#70bdff6e}.target{position:absolute;left:48%;top:39%;z-index:2;width:23px;height:23px;border-radius:50%;border:2px solid white;background:var(--teal);box-shadow:0 0 0 9px #37e0bf25,0 0 28px #37e0bf}.target:after{content:"";position:absolute;left:9px;top:20px;width:1px;height:70px;background:var(--teal)}.float{position:absolute;z-index:3;background:#061a2bdc;border:1px solid #b4e2ed3d;border-radius:12px;padding:12px 14px;backdrop-filter:blur(8px);font-size:10px;color:#b8ccd8;box-shadow:0 12px 35px #0004}.float strong{display:block;color:white;font-size:13px}.float.a{top:35px;right:-3px}.float.b{bottom:45px;left:-4px}.float.c{bottom:7px;right:8px}
+.metrics{background:#081b2a;border-block:1px solid var(--line)}.metricgrid{display:grid;grid-template-columns:repeat(4,1fr)}.metric{text-align:center;padding:24px 12px;border-right:1px solid var(--line)}.metric:last-child{border:0}.metric strong{display:block;font-size:25px;color:var(--teal);letter-spacing:-1px}.metric span{font-size:10px;color:#b5c7d4;font-weight:750}
+.section{padding:83px 0}.section.alt{background:#081b2a}.head{max-width:700px;margin-bottom:36px}.head.center{text-align:center;margin-inline:auto}.head.center .eyebrow{justify-content:center}.head h2{font-size:clamp(30px,4vw,45px);line-height:1.15;letter-spacing:-1.6px;margin:13px 0}.head p{font-size:14px;color:var(--muted);margin:0}.services{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.service{border:1px solid var(--line);background:linear-gradient(145deg,#0c2639,#091d2d);border-radius:var(--radius);padding:24px;min-height:235px;transition:.22s}.service:hover{transform:translateY(-4px);border-color:#37e0bf77;box-shadow:0 18px 45px #0003}.ico{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:#37e0bf18;border:1px solid #37e0bf30;color:var(--teal);font-size:23px;margin-bottom:17px}.service h3{font-size:17px;margin:0 0 8px}.service p{font-size:12px;color:#aec2cf;margin:0 0 15px}.tags{display:flex;gap:6px;flex-wrap:wrap}.tag{background:#d5eaf00d;border:1px solid var(--line);padding:4px 7px;border-radius:6px;font-size:9px;color:#c5d7e2;font-weight:750}
+.about{display:grid;grid-template-columns:.95fr 1.05fr;gap:55px;align-items:center}.satCard{position:relative;min-height:410px;overflow:hidden;border-radius:24px;border:1px solid var(--line);background:linear-gradient(180deg,#071b28a6,#061522e8),url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1100&q=85') center/cover}.satCard:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 35px,#6be3d42b 36px 37px),repeating-linear-gradient(90deg,transparent 0 35px,#6be3d42b 36px 37px)}.satText{position:absolute;left:27px;top:28px;max-width:260px}.satText h3{font-size:28px;line-height:1.2;margin:12px 0}.satText p{font-size:12px;color:#c2d5df}.coords{position:absolute;bottom:22px;left:27px;font:11px monospace;letter-spacing:1px;color:var(--teal)}.mapPin{position:absolute;right:25%;bottom:28%;font-size:39px;color:var(--teal);filter:drop-shadow(0 0 12px #37e0bf)}.aboutCopy h2{font-size:clamp(30px,4vw,43px);line-height:1.14;letter-spacing:-1.5px;margin:13px 0}.aboutCopy p{font-size:13px;color:var(--muted)}.benefits{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:25px 0}.benefit{display:flex;gap:9px;font-size:12px;font-weight:750;align-items:center}.benefit span:first-child{color:var(--teal);font-size:16px}.process{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.step{padding:19px 4px 0;border-top:2px solid var(--teal)}.step small{color:var(--teal);font-size:10px;font-weight:900;letter-spacing:1.5px}.step h3{font-size:16px;margin:8px 0}.step p{font-size:12px;color:var(--muted);margin:0}.band{border:1px solid #5ce2ca35;border-radius:24px;background:radial-gradient(ellipse at 90% 20%,#1a6b6a75,transparent 45%),linear-gradient(110deg,#0c293d,#0a3a45);padding:39px;display:flex;justify-content:space-between;align-items:center;gap:25px}.band h2{font-size:clamp(26px,3.5vw,36px);line-height:1.2;margin:0 0 8px}.band p{font-size:12px;color:#c0d2dd;margin:0}
+.contact{display:grid;grid-template-columns:.8fr 1.2fr;gap:35px}.contactInfo{padding:29px;border-radius:22px;background:#0b2436;border:1px solid var(--line)}.contactInfo h3{font-size:24px;margin:0 0 8px}.contactInfo>p{font-size:12px;color:var(--muted);margin-bottom:25px}.citem{display:flex;gap:12px;margin:20px 0;align-items:center}.cicon{width:39px;height:39px;display:grid;place-items:center;border-radius:11px;background:#37e0bf16;color:var(--teal);flex:none}.citem small{display:block;font-size:10px;color:#9db4c3}.citem strong{font-size:12px;overflow-wrap:anywhere}.form{padding:4px 0}.formrow{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{margin-bottom:14px}.field label{display:block;font-size:11px;font-weight:800;margin-bottom:6px}.field input,.field textarea,.field select{width:100%;border:1px solid var(--line);background:#0a2030;color:white;border-radius:10px;padding:12px;outline:none}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--teal);box-shadow:0 0 0 3px #37e0bf15}.field select option{background:#0a2030}.field textarea{min-height:115px;resize:vertical}.hint{font-size:10px;color:#9fb4c1;margin-top:10px}.notice{display:none;padding:12px;border-radius:9px;background:#123e3c;color:#b8fff0;font-size:11px;margin-top:12px}.footer{background:#030c14;border-top:1px solid var(--line);padding:26px 0;color:#9cb2c0;font-size:10px}.footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center}.footer strong{font-size:16px;color:white}.flinks{display:flex;gap:17px}.flinks a:hover{color:var(--teal)}
+@media(max-width:900px){.navlinks{gap:13px}.heroGrid{grid-template-columns:1fr 0.8fr;gap:10px}.services{grid-template-columns:repeat(2,1fr)}.about{gap:30px}.contact{gap:23px}}
+@media(max-width:700px){.wrap{width:calc(100% - 30px)}.top .wrap{justify-content:center;text-align:center}.nav{height:67px}.menu{display:block}.navlinks{display:none;position:absolute;left:0;right:0;top:67px;padding:17px 20px 22px;background:#061522;flex-direction:column;align-items:stretch;gap:0;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.navlinks>a:not(.btn){padding:11px 2px;border-bottom:1px solid var(--line)}.navlinks .btn{margin-top:13px}.hero{min-height:auto;background-position:center}.heroGrid{grid-template-columns:1fr;padding:45px 0 48px}.heroArt{grid-row:1;min-height:285px}.earth{width:245px}.float.a{top:6px;right:0}.float.b{bottom:12px;left:0}.float.c{bottom:0;right:0}h1{font-size:46px;letter-spacing:-2px}.hero p{font-size:13px}.section{padding:60px 0}.metricgrid{grid-template-columns:1fr 1fr}.metric:nth-child(2){border-right:0}.metric:nth-child(-n+2){border-bottom:1px solid var(--line)}.services{grid-template-columns:1fr}.service{min-height:auto}.about{grid-template-columns:1fr}.satCard{min-height:330px}.benefits{gap:12px}.process{grid-template-columns:1fr 1fr;row-gap:25px}.band{padding:27px;align-items:flex-start;flex-direction:column}.contact{grid-template-columns:1fr}.formrow{grid-template-columns:1fr;gap:0}.footer .wrap{flex-direction:column;text-align:center}.flinks{justify-content:center;flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 750px;
+  margin: auto;
+}
+
+.team-card {
+  background: #0b2233;
+  border: 1px solid rgba(190, 222, 238, .17);
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.team-avatar {
+  color: #37e0bf;
+  font-size: 12px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.team-photo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 3px solid #37e0bf;
+  display: block;
+  margin: 0 auto 18px;
+}
+
+.team-role {
+  color: #37e0bf;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.team-card h3 {
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+.team-education {
+  color: #afc2d0;
+  font-size: 13px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+@media (max-width: 600px) {
+  .team-photo {
+    width: 140px;
+    height: 140px;
+  }
+
+  .team-card {
+    padding: 18px;
+  }
+}
+
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap"><span>⌖Sankhu, Kathmandu, Nepal</span><span>Geomatics Engineering · GIS · Digital Technology</span></div></div>
+<header><div class="wrap nav">
+<a class="brand" href="#home"><span class="logo">G<span style="font-size:12px">+</span></span><span>GeoIT Nepal<small>GEO · DATA · TECHNOLOGY</small></span></a>
+<button class="menu" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">☰</button>
+<nav class="navlinks" id="navlinks"><a href="#home">Home</a><a href="#services">Services</a><a href="#about">About Us</a><a href="#process">Our Process</a><a href="#contact">Contact</a><a class="btn" href="#contact">Start a Project ↗</a></nav>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="wrap heroGrid"><div>
+<div class="eyebrow">Geomatics × Information Technology</div>
+<h1>Mapping the Earth,<br><span class="accent">Building the Future.</span></h1>
+<p>GeoIT Nepal connects the physical world with digital innovation. From surveying, GIS and remote sensing to websites, mobile applications and custom software, we bring location intelligence and technology together to solve real-world challenges.</p>
+<div class="actions"><a class="btn" href="#services">Explore Our Services ↗</a><a class="btn outline" href="#about">Discover GeoIT</a></div>
+<div class="heroFacts"><span>Field-to-digital solutions</span><span>Project-focused approach</span><span>Based in Sankhu, Kathmandu, Nepal</span></div>
+</div><div class="heroArt" aria-label="Abstract digital Earth and geospatial location graphic"><div class="earth"><div class="orbit"></div><div class="orbit two"></div><div class="target"></div></div><div class="float a"><strong>GIS & Mapping</strong>Location intelligence</div><div class="float b"><strong>Surveying</strong>Ground data & precision</div><div class="float c"><strong>Digital Products</strong>Web · Apps · Software</div></div></div></section>
+<section class="metrics"><div class="wrap metricgrid"><div class="metric"><strong>01</strong><span>Integrated service partner</span></div><div class="metric"><strong>360°</strong><span>Field-to-digital approach</span></div><div class="metric"><strong>GIS</strong><span>Spatial data intelligence</span></div><div class="metric"><strong>IT</strong><span>Technology that works</span></div></div></section>
+<section class="section alt" id="services"><div class="wrap"><div class="head center"><div class="eyebrow">Our Services · हाम्रा सेवाहरू</div><h2>One team for geospatial and digital solutions.</h2><p>We support projects across geomatics engineering, mapping and information technology. Services can be tailored to your goals, site, data and budget.</p><p lang="ne">सर्भेक्षण र नक्साङ्कनदेखि सफ्टवेयर तथा डिजिटल प्रणालीसम्म—तपाईंको आवश्यकताअनुसार व्यावहारिक समाधान।</p></div>
+<div class="services">
+<article class="service"><div class="ico">⌖</div><h3>Surveying & Geomatics Engineering</h3><p>Survey and measurement support for land, infrastructure and development projects.</p><div class="tags"><span class="tag">Total Station</span><span class="tag">GNSS / DGPS</span><span class="tag">Topographic</span><span class="tag">Engineering Survey</span><span class="tag">Control Survey</span></div></article>
+<article class="service"><div class="ico">▧</div><h3>GIS & Geospatial Analysis</h3><p>Manage, analyze and visualize spatial data to support planning and evidence-based decisions.</p><div class="tags"><span class="tag">GIS</span><span class="tag">Spatial Analysis</span><span class="tag">Geodatabase</span><span class="tag">Web GIS</span></div></article>
+<article class="service"><div class="ico">⌗</div><h3>Digital Mapping & Cartography</h3><p>Readable, purpose-built maps and spatial data products for reports, planning and presentation.</p><div class="tags"><span class="tag">Thematic Maps</span><span class="tag">Map Layouts</span><span class="tag">Location Data</span><span class="tag">Map Digitization</span></div></article>
+<article class="service"><div class="ico">◈</div><h3>Drone Mapping & Remote Sensing</h3><p>Project-based aerial imagery processing and remote-sensing workflows, subject to equipment, permissions and project scope.</p><div class="tags"><span class="tag">Photogrammetry</span><span class="tag">Orthomosaic</span><span class="tag">DEM / DTM</span><span class="tag">Image Analysis</span></div></article>
+<article class="service"><div class="ico">⌁</div><h3>CAD, Drafting & 3D Modelling</h3><p>Technical drafting and visualization support for engineering plans and project deliverables.</p><div class="tags"><span class="tag">AutoCAD 2D/3D</span><span class="tag">Plan Drafting</span><span class="tag">3D Models</span><span class="tag">Survey Drawings</span></div></article>
+<article class="service"><div class="ico">⌘</div><h3>Website & Web Application Development</h3><p>Responsive websites, business portals, dashboards and custom web applications.</p><div class="tags"><span class="tag">UI / UX</span><span class="tag">Frontend</span><span class="tag">Backend</span><span class="tag">Web GIS</span></div></article>
+<article class="service"><div class="ico">▣</div><h3>Mobile App Development</h3><p>Mobile-first digital tools for field data collection, reporting, communication and everyday workflows.</p><div class="tags"><span class="tag">Android</span><span class="tag">Field Data Apps</span><span class="tag">App Prototypes</span></div></article>
+<article class="service"><div class="ico">⌘</div><h3>Custom Software & Database Systems</h3><p>Purpose-built software, information systems and database workflows for organizations and teams.</p><div class="tags"><span class="tag">Automation</span><span class="tag">Database</span><span class="tag">Data Systems</span><span class="tag">Reporting</span></div></article>
+<article class="service"><div class="ico">⚙</div><h3>IT Support & Digital Transformation</h3><p>Practical guidance on digital workflows, system setup, data organization and technology adoption.</p><div class="tags"><span class="tag">IT Consulting</span><span class="tag">System Setup</span><span class="tag">Cloud Workflows</span></div></article>
+<article class="service"><div class="ico">◎</div><h3>Geospatial Data & Research</h3><p>Spatial data cleaning, location-based research, analysis and clear project reporting.</p><div class="tags"><span class="tag">Data Cleaning</span><span class="tag">Spatial Research</span><span class="tag">Technical Reports</span></div></article>
+<article class="service"><div class="ico">↗</div><h3>Technical Training & Guidance</h3><p>Practical learning support in GIS, surveying workflows, CAD tools and digital technology.</p><div class="tags"><span class="tag">GIS Basics</span><span class="tag">Survey Software</span><span class="tag">Digital Skills</span></div></article>
+<article class="service"><div class="ico">＋</div><h3>Integrated Project Solutions</h3><p>Combine field survey, mapping, spatial analysis and custom digital tools in a coordinated workflow.</p><div class="tags"><span class="tag">End-to-End Planning</span><span class="tag">Consultation</span><span class="tag">Custom Scope</span></div></article>
+</div></div></section>
+<!-- OUR TEAM SECTION -->
+<section class="section" id="team">
+  <div class="wrap">
+    <div class="head center">
+      <div class="eyebrow">Our Team · हाम्रो टोली</div>
+      <h2>Meet the People Behind GeoIT Nepal.</h2>
+      <p>
+        A growing team combining geomatics engineering,
+        geospatial knowledge and information technology.
+      </p>
+    </div>
+
+    <div class="team-grid">
+      <article class="team-card">
+        <div class="team-avatar"></div>
+
+        <div class="team-role">Founder / Team Member</div>
+        <div class="team-member">
+  <img src="c:\Users\Subash Tamang\Downloads\subash tamang.jpg.jpeg"
+       alt="Subash Tamang"
+       class="team-photo">
+
+        <h3>Subash Tamang</h3>
+
+        <p class="team-education">
+         Subash Tamang holds a Diploma in Geomatics Engineering from Shankharapur Polytechnic Institute and is currently pursuing a Bachelor of Information Technology (BIT) at Bagmati University, Kapan Campus, Kathmandu, Nepal. With an interest in surveying, GIS, GPS, remote sensing, digital mapping, and software development, he aims to bridge the gap between geospatial engineering and modern information technology. Through GeoIT Nepal, he aspires to develop innovative solutions in surveying, mapping, web development, mobile applications, and digital technologies.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="section" id="about"><div class="wrap about"><div class="satCard"><div class="satText"><div class="eyebrow">About GeoIT Nepal</div><h3>From the field to the digital world.</h3><p>Location-aware thinking. Technology-led solutions. Designed around your project.</p></div><div class="mapPin">⌖</div><div class="coords">KATHMANDU, NEPAL · GEO + IT</div></div><div class="aboutCopy"><div class="eyebrow">Who we are · हाम्रो परिचय</div><h2>Two disciplines.<br>One connected vision.</h2><p>GeoIT Nepal is a geomatics and information technology company concept built on a simple idea: location data becomes more valuable when it connects with modern digital tools. We aim to help individuals, businesses, engineering teams and organizations plan, understand and deliver projects with practical geospatial and IT solutions.</p><p lang="ne">GeoIT Nepal ले Geomatics Engineering र Information Technology लाई एउटै प्लेटफर्ममा जोडेर सर्भेक्षण, GIS, नक्साङ्कन, वेब तथा मोबाइल एप र सफ्टवेयरसम्बन्धी समाधान प्रदान गर्ने लक्ष्य राख्छ।</p><div class="benefits"><div class="benefit"><span>✓</span><span>Geomatics + IT integration</span></div><div class="benefit"><span>✓</span><span>Clear project communication</span></div><div class="benefit"><span>✓</span><span>Purpose-built solutions</span></div><div class="benefit"><span>✓</span><span>Scalable digital thinking</span></div></div><a class="btn" href="#contact">Discuss Your Project ↗</a></div></div></section>
+<section class="section alt" id="process"><div class="wrap"><div class="head"><div class="eyebrow">Our Process · हाम्रो कार्यप्रणाली</div><h2>Clear steps. Practical outcomes.</h2><p>We work to understand the requirement first, define a realistic scope and deliver outputs that fit the project.</p></div><div class="process"><div class="step"><small>STEP 01</small><h3>Listen & Understand</h3><p>Discuss goals, location, available data, timelines and expected results.</p></div><div class="step"><small>STEP 02</small><h3>Plan the Work</h3><p>Agree on the scope, workflow, tools, deliverables and next steps.</p></div><div class="step"><small>STEP 03</small><h3>Build & Review</h3><p>Carry out the agreed work and review outputs for clarity and usefulness.</p></div><div class="step"><small>STEP 04</small><h3>Deliver & Support</h3><p>Hand over the agreed files and explain how to use the deliverables.</p></div></div></div></section>
+<section class="section"><div class="wrap"><div class="band"><div><h2>Have a project in mind?</h2><p>Surveying, mapping, GIS, CAD, a website, mobile app or custom software—we'd like to hear about it.</p><p lang="ne">तपाईंको बारे कुरा गरौँ।</p></div><a class="btn" href="#contact">Start a Conversation ↗</a></div></div></section>
+<section class="section alt" id="contact"><div class="wrap"><div class="head"><div class="eyebrow">Contact · सम्पर्क</div><h2>Let's build something useful.</h2><p>Share your requirements and we can discuss a suitable next step.</p></div><div class="contact"><aside class="contactInfo"><h3>Contact GeoIT Nepal</h3><p>For service inquiries, project collaboration and technical questions.</p><div class="citem"><div class="cicon">✉</div><div><small>Email / इमेल</small><strong>subashtamangtheenglama@gmail.com</strong></div></div><div class="citem"><div class="cicon">☎</div><div><small>Phone / फोन</small><strong>+977 9805511000</strong></div></div><div class="citem"><div class="cicon">⌖</div><div><small>Office / कार्यालय</small><strong>Kathmandu, Nepal</strong></div></div><div class="citem"><div class="cicon">◷</div><div><small>Availability</small><strong>By appointment</strong></div></div></aside>
+<form class="form" id="contactForm"><div class="formrow"><div class="field"><label for="name">Your name / नाम *</label><input id="name" name="name" required placeholder="Enter your name"></div><div class="field"><label for="email">Email address / इमेल *</label><input id="email" name="email" type="email" required placeholder="you@example.com"></div></div><div class="field"><label for="service">Service / सेवा छान्नुहोस्</label><select id="service" name="service"><option>Surveying & Geomatics</option><option>GIS & Digital Mapping</option><option>Drone Mapping & Remote Sensing</option><option>CAD & 3D Modelling</option><option>Website / Web Application</option><option>Mobile App Development</option><option>Custom Software / Database</option><option>IT Support</option><option>Geospatial Research / Data</option><option>Other / Not sure yet</option></select></div><div class="field"><label for="message">Project details / प्रोजेक्ट विवरण *</label><textarea id="message" name="message" required placeholder="Tell us what you need, where the project is, and your expected outcome."></textarea></div><button class="btn" type="submit">Prepare Inquiry Email ↗</button><p class="hint">Demo contact form: it opens your email application. Before publishing, replace the placeholder email and phone number with your official business contacts.</p><div class="notice" id="notice" role="status"></div></form></div></div></section>
+</main>
+<footer class="footer"><div class="wrap"><div><strong>GeoIT Nepal</strong><br>Mapping the Earth, Building the Future.<br>© <span id="year"></span> GeoIT Nepal. All rights reserved.</div><div class="flinks"><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></div><div>Kathmandu, Nepal · Geomatics + IT</div></div></footer>
+<script>
+const menuBtn=document.getElementById('menuBtn'),nav=document.getElementById('navlinks');
+menuBtn.addEventListener('click',()=>{let open=nav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.textContent=open?'×':'☰';});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰';}));
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('contactForm').addEventListener('submit',e=>{e.preventDefault();let f=new FormData(e.currentTarget);let subject=encodeURIComponent('GeoIT Nepal inquiry — '+f.get('service'));let body=encodeURIComponent('Name: '+f.get('name')+'\nEmail: '+f.get('email')+'\nService: '+f.get('service')+'\n\nProject details:\n'+f.get('message'));document.getElementById('notice').style.display='block';document.getElementById('notice').textContent='Your email app will open. Update the placeholder recipient in this HTML file before publishing.';window.location.href='mailto:subashtamangtheenglama@gmail.com?subject='+subject+'&body='+body;});
+</script>
+</body>
+</html>
